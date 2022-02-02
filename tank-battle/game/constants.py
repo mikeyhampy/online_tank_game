@@ -1,0 +1,77 @@
+import os
+
+MAX_X = 800
+MAX_Y = 600
+FRAME_RATE = 30
+
+DEFAULT_SQUARE_SIZE = 20
+DEFAULT_FONT_SIZE = 72
+DEFAULT_TEXT_OFFSET = 4
+
+TANK_TOP_WIDTH = 65
+TANK_FRONT_WIDTH = 73
+TANK_WIDTH = 96
+TANK_HEIGHT = 45
+
+BARREL_WIDTH = 71
+BARREL_HEIGHT = 17
+
+WALL_WIDTH = 17
+WALL_HEIGHT = 275
+
+BALL_WIDTH = 5
+BALL_HEIGHT = 5
+BALL_DX = -8
+BALL_DY = -8
+
+TANK_SPEED = 1
+TANK_ANGLE = 180
+TANK_ANGLE2 = 360
+
+FULL_TANK_WIDTH = 144
+FULL_TANK_HEIGHT = 45
+SELECTOR_Y = 300
+SELECTOR_X = 92
+SELECTOR_LINE_WIDTH = 4
+
+RED = "red"
+GRAY = "gray"
+BLUE = "blue"
+ORANGE = "orange"
+YELLOW = "yellow"
+GREEN = "green"
+
+ASSETS_PATH = os.path.join(os.getcwd(), 'tank-battle', 'assets')
+IMAGE_BACKGROUND = os.path.join(os.getcwd(), "./tank-battle/assets/background.png")
+
+SOUND_START = os.path.join(ASSETS_PATH, "start.wav")
+SOUND_RELOAD = os.path.join(ASSETS_PATH, "reload.wav")
+SOUND_FIRE = os.path.join(ASSETS_PATH, "fire_tank.wav")
+SOUND_THUD = os.path.join(ASSETS_PATH, "miss_tank.wav")
+SOUND_EXPLOSION = os.path.join(ASSETS_PATH, "explode.wav")
+SOUND_TOGGLE = os.path.join(ASSETS_PATH, "menu-toggle.wav")
+
+
+TANK_X1 = (MAX_X * (1 / 2)) + (MAX_X * (1 / 4))
+TANK_X2 = (MAX_X * (1 / 2)) - (MAX_X * (1 / 4)) - TANK_WIDTH
+TANK_Y = MAX_Y - TANK_HEIGHT
+
+BARREL_X1 = TANK_X1 + (TANK_WIDTH - TANK_FRONT_WIDTH)
+BARREL_X2 = TANK_X2 + (TANK_FRONT_WIDTH)
+BARREL_Y1 = TANK_Y + BARREL_HEIGHT
+BARREL_Y2 = TANK_Y
+
+TANK_ANGLE_CHANGE = (BARREL_HEIGHT)/(170 / 3)
+
+BALL1_POS = BARREL_X1 + (BALL_WIDTH * 1.4)
+BALL2_POS = BARREL_X2 - (BALL_WIDTH * 1.4)
+BALL_Y = TANK_Y + (BARREL_HEIGHT) - (BALL_HEIGHT * 1.4)
+BALL_Y1 = TANK_Y + (BARREL_HEIGHT) - (BALL_HEIGHT * 2.1)
+
+
+
+BALL_CHANGE_X1 = 0
+BALL_CHANGE_X2 = 0
+PLAYER_TANK_COLOR1 = ""
+PLAYER_TANK_COLOR2 = ""
+KEEP_PLAYING = True
