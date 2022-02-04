@@ -46,7 +46,8 @@ class ControlActorsAction(Action):
         else:
             # Barrel 1 and tank 1
             fire = False
-            direction1, fire = self._input_service.get_direction()
+            fire2 = False
+            direction1, fire, direction2, fire2 = self._input_service.get_direction()
             barrel1 = cast["barrel"][0]
             tank1 = cast["tank"][0]
             tank1.set_velocity(direction1.scale(constants.TANK_SPEED))
@@ -58,7 +59,7 @@ class ControlActorsAction(Action):
                 self._audio_service.play_sound(constants.SOUND_RELOAD)
                 #self._audio_service.stop_audio(constants.SOUND_RELOAD)
                 
-            if fire and self.fire_timer > 35:
+            if fire and self.fire_timer > 21:
                 ball = Ball()
                 ball.angle1 += constants.TANK_ANGLE
                 ball.set_ball1()
@@ -66,8 +67,8 @@ class ControlActorsAction(Action):
                 self.fire_timer = 0
                 self._audio_service.play_sound(constants.SOUND_FIRE)
             # Barrel 2 and tank 2
-            fire2 = False
-            direction2, fire2 = self._input_service.get_direction2()
+            # fire2 = False
+            # direction2, fire2 = self._input_service.get_direction2()
             barrel2 = cast["barrel"][1]
             tank2 = cast["tank"][1]
             tank2.set_velocity(direction2.scale(constants.TANK_SPEED))
@@ -77,7 +78,7 @@ class ControlActorsAction(Action):
             self.fire_timer2 += 1
             if self.fire_timer2 == 20:
                 self._audio_service.play_sound(constants.SOUND_RELOAD)
-            if fire2 and self.fire_timer2 > 35:
+            if fire2 and self.fire_timer2 > 21:
                 ball = Ball()
                 ball.angle2 += constants.TANK_ANGLE2
                 self._audio_service.play_sound(constants.SOUND_FIRE)

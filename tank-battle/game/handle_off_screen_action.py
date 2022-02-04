@@ -38,19 +38,19 @@ class HandleOffScreenAction(Action):
         # tank won't go off screen
         if(tank_x2 < 0):
             tank2._position._x = 0
-            barrel2._position._x += 1
+            barrel2._position._x += 1 * constants.TANK_SPEED
             constants.BALL_CHANGE_X2 -= tank2._velocity._x
         if(tank_x1 > constants.MAX_X - constants.TANK_WIDTH):
             tank1._position._x = constants.MAX_X - constants.TANK_WIDTH
-            barrel1._position._x += -1
+            barrel1._position._x += -1 * constants.TANK_SPEED
             constants.BALL_CHANGE_X1 -= tank1._velocity._x
 
         # tank stays on its own side
         if(tank_x2 > ((constants.MAX_X / 2) - constants.FULL_TANK_WIDTH - constants.WALL_WIDTH)):
-            tank2._position._x += -1
-            barrel2._position._x += -1   
+            tank2._position._x += -1 * constants.TANK_SPEED
+            barrel2._position._x += -1 * constants.TANK_SPEED
             constants.BALL_CHANGE_X2 -= tank2._velocity._x
         if(tank_x1 < ((constants.MAX_X / 2) + constants.BARREL_WIDTH + constants.WALL_WIDTH)):
-            tank1._position._x += 1
-            barrel1._position._x += 1
+            tank1._position._x += 1 * constants.TANK_SPEED
+            barrel1._position._x += 1 * constants.TANK_SPEED
             constants.BALL_CHANGE_X1 -= tank1._velocity._x

@@ -55,7 +55,24 @@ def get_color(player):
     color_opponent = pla_ref.child('color').get()
     return color_opponent
 
-def set_directions(player, dx, dy):
+def set_directions(player, dx, dy, fire, player2):
+    """
+    tells opponent how your tank is moving
+    """
+    ref = db.reference('Players')
+    pla_ref = ref.child(player)
+    pla2_ref = ref.child(player2)
+
+    pla_ref.update({
+        'dx': dx,
+        'dy': dy,
+        'fire': fire
+    })
+    direction_opponent = {}
+    direction_opponent = pla2_ref.get()
+    return direction_opponent['dx'], direction_opponent['dy'], direction_opponent['fire']
+
+def set_pointer(player, dx, dy, select):
     """
     tells opponent how your tank is moving
     """
@@ -64,89 +81,17 @@ def set_directions(player, dx, dy):
 
     pla_ref.update({
         'dx': dx,
-        'dy': dy
+        'dy': dy,
+        'color_selected': select
     })
 
-def get_directions(player):
+def get_pointer(player):
     """
     function will return opponents tank possion entered keys
-    dx    dy
+    dx    dy    select
     """
     ref = db.reference('Players')
     pla_ref = ref.child(player)
     direction_opponent = {}
     direction_opponent = pla_ref.get()
-
-
-    return direction_opponent['dx'], direction_opponent['dy']
-
-def set_fire(player, fire):
-    """
-    tells opponent if you fired
-    """
-    ref = db.reference('Players')
-    pla_ref = ref.child(player)
-
-    pla_ref.update({
-
-        'fire': fire
-    })
-
-def get_fire(player):
-    """
-    function will return if opponent has fired
-    """
-    ref = db.reference('Players')
-    pla_ref = ref.child(player)
-    fire_opponent = pla_ref.child('fire').get()
-    return fire_opponent
-
-
-# options = 0
-# while options == 0:
-#     color = get_color("player1")
-#     print(color)
-#     options = int(input("enter number: "))
-
-# def change_color(color):
-#     ref = db.reference('Players')
-#     pla_ref = ref.child('player1')
-
-#     pla_ref.update({
-
-#         'color': color
-#     })
-
-
-# ref = db.reference('Employee')
-# ref.update({
-
-#     'emp1/lname': 'updated lname1',
-#     'emp2/lname': 'updated lname2'
-# })
-
-# lame = db.reference('Employee2')
-
-# emp_ref = lame.push({
-#     'emp12': {
-#         'password': 12345,
-#         'name': 'Parwiz',
-#         'lname': 'Forogh',
-#         'age': 24
-#     }
-# })
-
-# ref = db.reference('Employee2')
-# emp_ref = ref.child('emp1')
-
-# emp_ref.update({
-
-# })
-
-
-"""get info format"""
-# ref = db.reference('Employee')
-# emp_ref = ref.child('emp1')
-# name = emp_ref.child('name').get()
-
-# print(name)
+    return direction_opponent['dx'], direction_opponent['dy'], direction_opponent['color_selected']
