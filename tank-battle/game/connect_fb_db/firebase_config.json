@@ -1,12 +1,12 @@
 {
   "type": "service_account",
   "project_id": "pythonfbtesting",
-  "private_key_id": "9",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIE\n-----END PRIVATE KEY-----\n",
-  "client_email": "firebase-adminsdk@pythonfbtesting.serviceaccount.com",
-  "client_id": "0",
+  "private_key_id": "9c43384588e5e9ae99de761c92ddde88a0ca223a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDIyC1ZNNXw43Xx\nSlWTdJutvTMVbs6Ol5JoG8i0j5JqmpVLLAxqpn7u0Vqtp2n56k0YZNL8r0KNdhNi\nxYoSyEUFYya0BCy/LXpO07ZXK7DhmAxKqoA4L2AL4gadmQF40PH5iTl5z+cXJxBr\nNRm26eTazgprkalLggd4qpWNIj/xNPuJJOisDPSmJUE7UuL2yxFkB3CEKdCmfwHR\nEL9RAY1i8+L3xa7FqoSXPYEcuC1sXYvLTVCTvbM3KFhXIam7bTpZXZ5x1nakPgYQ\n4ZzFzcFmcd6iBcJVd0nksBRXskZshcEWqZrdiQv/MHDlDPjCTuP/IX59L1rl8Ux/\nzdi69gczAgMBAAECggEAXpBdP2cRnkdbLL5AaNciXWU/UohiM6lytKLlWBlIsfnF\nd+ayoGZzYSJsLV6snJ68GdGex5D57OtgPQRhv+/gBiYJO/69XntaYBb5ibvTrqSw\noVgFVLEHcQFO8Vn3ZgIu/UKitdrz8aUd6AhV6J7ngSBKqxgrHpuKzku1bQflCsJ9\nPIDNqEqopWDaUmQnzCI1n5gv1Vtl466obVDy+VY/bbMLb4T4RJ+/jSamlV5RzK8Z\nt8HDKsM1IezwP7o7oeXLv5L1I9j6HaRz098lPcdyjmTwSDkZYreXXtDTjs+qwJKQ\n5uiPfP7Qjbd5rEhCyMvf1/GkBZ6VMA5ZLaGb3S07cQKBgQD7vTEN2JFRXSskSlO0\nKKwysBTXT9AGpdbPyQXSIlwljZekUqgDShSpDgbehrNz8yn1BNxej3LlursiB/AG\njdTnOncwk+2bmVTznkpYqZsBhdSxmV+hzxARKcvuFQo1oWY80KNjdDZPGZuhwF/b\nrY3jaTyIe+cTFPL1NVw2teYSIwKBgQDMLi8L0iHx/ATeUTJSGvERzXLN6C7RI4HQ\np4Mr5bzf8tUfDa43NAKJrm0KVS/QPnYuOIW2sO60i6hVOik4a2JgZ35ugc9xnG/L\n5vT+PnRCYrCFCro+IqVTIDK3raHJY+qzvTKsBpIeWTVzyx3K1/actHxyeMYtdjSR\nY48opn3fsQKBgFiXxGOzC7EusLgc0Ehe5/sOrMb5d6RfSLHndPz2yqcMpYlW7Xn6\n4Dp+jTxS+2Sa9vEbvNIqea0Pgjv/vyEPWRXnJXsbFEvmMldqJY/+YGawyqGV8Gnp\njSX9J5+qF+W331sXseiWRWahBHxwT0voUD7wEjWWJUQ54ycYmFNIwKcxAoGAAhJh\n5dPPBl6RShQ214Bwe8bC6HX3q6WZlp1shlCBdyBGq1b/Mo4zjGQZtSYiIxHPLy7h\npHXtJiXYomzBqFHmoKXMMaDdkwCMXdxNFhtaIKZRtjfipejCFrLX8OcxIhMCeaps\nzjQO3YH4OeGQvtMsLHDkZmD1Wda+N89zz2zJEDECgYBi+O4wHTjoM8501bOa80mw\n5nX/tZd/kffoQq1DBYZ3OAwciakjHv0Q9FiQWFPb/ii49hWvSXohXV5r9rwx+NKr\nkw+LYBcZWw9bPcRmzDKiN9WptegnPVxjprHTe55XHlqo+BMnOoMnclSw0R8yuJKD\nkX9XGewplup2SZjp5eB3RA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-f8ay3@pythonfbtesting.iam.gserviceaccount.com",
+  "client_id": "103096609066915211040",
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
   "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/",
-  "client_x509_cert_url": "https://www.googleapis.com/"
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-f8ay3%40pythonfbtesting.iam.gserviceaccount.com"
 }
