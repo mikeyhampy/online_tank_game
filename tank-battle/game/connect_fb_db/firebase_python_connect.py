@@ -32,29 +32,6 @@ def get_color_selected(player):
     selected_opponent = pla_ref.child('color_selected').get()
     return selected_opponent
 
-
-
-def set_color(player, color):
-    """
-    will tell opponent your color
-    """
-    ref = db.reference('Players')
-    pla_ref = ref.child(player)
-
-    pla_ref.update({
-
-        'color': color
-    })
-
-def get_color(player):
-    """
-    function will return opponents tank color
-    """
-    ref = db.reference('Players')
-    pla_ref = ref.child(player)
-    color_opponent = pla_ref.child('color').get()
-    return color_opponent
-
 def set_directions(player, dx, dy, fire, player2):
     """
     tells opponent how your tank is moving
