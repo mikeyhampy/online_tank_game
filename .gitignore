@@ -127,3 +127,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+tank-battle/game/connect_fb_db/firebase_config.json
