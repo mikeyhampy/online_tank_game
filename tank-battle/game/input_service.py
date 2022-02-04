@@ -27,10 +27,6 @@ class InputService:
         self._down = False
         self._right = False
         self._left = False
-        self._w = False
-        self._s = False
-        self._a = False
-        self._d = False
         self.audio_service = AudioService()
         
     def get_direction(self):
@@ -71,7 +67,7 @@ class InputService:
         dx2, dy2, fire2 = firebase_python_connect.set_directions(constants.YOUR_USER_NAME, dx, dy, fire, constants.OPPONENT_USER_NAME)
 
         direction = Point(dx, dy)
-        direction2 = Point(dx2, dy2)
+        direction2 = Point(dx2 * -1, dy2 * -1)
         return direction, fire, direction2, fire2
 
     def set_choice(self):
